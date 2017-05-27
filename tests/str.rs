@@ -1,4 +1,4 @@
-// Copyright 2014 The Rust Project Developers. See the COPYRIGHT
+// Copyright 2014-2015 The Rust Project Developers. See the COPYRIGHT
 // file at the top-level directory of this distribution and at
 // http://rust-lang.org/COPYRIGHT.
 //
@@ -8,13 +8,4 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
-#![doc(hidden)]
-
-macro_rules! assert_approx_eq {
-    ($a:expr, $b:expr) => ({
-        use num::Float;
-        let (a, b) = (&$a, &$b);
-        assert!((*a - *b).abs() < 1.0e-6,
-                "{} is not approximately equal to {}", *a, *b);
-    })
-}
+// All `str` tests live in collectionstests::str
